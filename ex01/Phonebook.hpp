@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 11:29:28 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/09 11:48:18 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/06/10 11:54:56 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Phonebook
 		Phonebook(void);
 		~Phonebook(void);
 
-		void create_contact(void);
+		void create_new_contact(void);
+		void show_contact(void);
 		
 	private:
 		
