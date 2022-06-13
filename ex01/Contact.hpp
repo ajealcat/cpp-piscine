@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 11:48:29 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/10 11:54:40 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/06/13 11:23:09 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,12 @@ class Contact
 			std::string darkestsecret);
 	~Contact(void);
 
-	void	contact_form(int contact) const;
+	void	contact_form(void) const;
+	std::string	get_firstname(void) const;
+	std::string	get_lastname(void) const;
+	std::string	get_nickname(void) const;
+	std::string	get_phonenumber(void) const;
+	std::string	get_darkestsecret(void) const;;
 	
 	private:
 
