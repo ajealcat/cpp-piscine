@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 15:35:52 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/14 16:36:03 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:48:00 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ int main(void)
 	Phonebook	repertory;
 	std::string	cmd;
 
-	std::cout << "To add a new contact use ADD " << std::endl;
-	std::cout << "To search a contact use SEARCH " << std::endl;
-	std::cout << "To quit a contact use EXIT " << std::endl;
+	std::cout << "Thank you for using our phonebook 🤖" << std::endl;
+	std::cout << "To add a new contact use ADD 📥" << std::endl;
+	std::cout << "To search a contact use SEARCH 🔎" << std::endl;
+	std::cout << "To quit a contact use EXIT ❌" << std::endl;
 	while (cmd != "EXIT")
 	{
-		std::cout << "> ";
+		std::cout << "➡️ ";
 		std::getline(std::cin, cmd);
 		if (std::cin.fail())
 		{
@@ -37,5 +38,6 @@ int main(void)
 		else if (cmd == "SEARCH")
 			repertory.show_contact();
 	}
+	
 	return (0);
 }

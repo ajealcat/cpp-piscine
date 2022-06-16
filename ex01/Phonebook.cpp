@@ -6,12 +6,13 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:27:22 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/16 11:27:58 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:55:39 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
 #include <cstdlib>
+#include <iomanip>
 
 Phonebook::Phonebook(void)
 {
@@ -37,7 +38,7 @@ std::string	get_prompt(std::string const entry)
 	}
 	while (!input.size())
 	{
-		std::cout << ">" << std::endl;
+		std::cout << "➡️" << std::endl;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
@@ -60,6 +61,15 @@ void Phonebook::create_new_contact(void)
 	this->_contact++;
 }
 
+std::string	resize(std::string const input)
+{
+	if (input.size() > 10)
+		return (input.substr(0, 9) + ".");
+	else
+		return (input);
+	return (NULL);
+}
+
 void Phonebook::show_contact(void)
 {
 	size_t 		i;
@@ -67,10 +77,10 @@ void Phonebook::show_contact(void)
 	
 	for (i = 0 ; i < this->_contact && i < 8 ; i++)
 	{
-		std::cout << "[" << i + 1 << "]	";
-		std::cout << this->_contact_list[i].get_firstname() << " | ";
-		std::cout << this->_contact_list[i].get_lastname() << " | ";
-		std::cout << this->_contact_list[i].get_nickname()<< std::endl;
+		std::cout << std::setw(10) << "[" << i + 1 << "]";
+		std::cout << std::setw(10) << resize(this->_contact_list[i].get_firstname()) << " | ";
+		std::cout << std::setw(10) << resize(this->_contact_list[i].get_lastname()) << " | ";
+		std::cout << std::setw(10) << resize(this->_contact_list[i].get_nickname()) << std::endl;
 	}
 	std::cout << "Choose a contact :" << std::endl;
 	std::getline(std::cin, index);
