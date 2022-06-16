@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 11:48:29 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/13 11:23:09 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/06/14 15:23:30 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class Contact
 {
 	public:
 
-	Contact(std::string firstname, std::string lastname, 
-			std::string nickname, std::string phonenumber,
-			std::string darkestsecret);
+	Contact(std::string firstname = "default", std::string lastname = "default", 
+			std::string nickname = "default", std::string phonenumber = "default",
+			std::string darkestsecret = "default");
 	~Contact(void);
 
 	void	contact_form(void) const;

@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 11:29:28 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/10 11:54:56 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/06/16 11:22:08 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Phonebook
 	private:
 		
 		Contact _contact_list[8];
-		int	_contact;
+		size_t	_contact;
 };
 
 #endif

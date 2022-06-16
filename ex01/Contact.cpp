@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 11:36:10 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/13 11:22:53 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/06/16 11:31:08 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ std::string	Contact::get_darkestsecret(void) const
 void	Contact::contact_form(void) const
 {
 	std::cout << "first name : " << this->_firstname << std::endl;
-	std::cout << "last name : " << this->_firstname << std::endl;
-	std::cout << "nick name : " << this->_firstname << std::endl;
-	std::cout << "phone number : " << this->_firstname << std::endl;
-	std::cout << "darkest secret : " << this->_firstname << std::endl;
+	std::cout << "last name : " << this->_lastname << std::endl;
+	std::cout << "nick name : " << this->_nickname << std::endl;
+	std::cout << "phone number : " << this->_phonenumber << std::endl;
+	std::cout << "darkest secret : " << this->_darkestsecret << std::endl;
 }
