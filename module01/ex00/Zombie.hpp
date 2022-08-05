@@ -1,18 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/16 15:34:02 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/05 16:23:37 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/08/05 16:23:07 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/08/05 16:50:03 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-int main(void)
+# include <iostream>
+# include <string>
+
+class Zombie
 {
+
+	public:
+
+		Zombie(void);
+		~Zombie(void);
+
+	void annonce(void);
+
+	private:
+
+	std::string	_name;
 	
-}
+
+};
+
+
+#endif
