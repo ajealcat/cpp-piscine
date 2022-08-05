@@ -5,14 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/09 11:09:48 by ajearuth          #+#    #+#              #
-#    Updated: 2022/08/05 15:08:13 by ajearuth         ###   ########.fr        #
+#    Created: 2022/06/16 15:33:33 by ajearuth          #+#    #+#              #
+#    Updated: 2022/06/16 15:33:43 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	phonebook
-SRCS	=	Contact.cpp PhoneBook.cpp main.cpp
-# INC		=	Phonebook.hpp	Contact.hpp
+NAME	=	
+SRCS	=	
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++
 FLAGS	=	-std=c++98 -Wall -Wextra -Werror

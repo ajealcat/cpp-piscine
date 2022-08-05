@@ -6,17 +6,17 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 15:35:52 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/16 14:48:00 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/05 15:08:50 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 #include "Contact.hpp"
 #include <cstdlib>
 
 int main(void)
 {
-	Phonebook	repertory;
+	PhoneBook	repertory;
 	std::string	cmd;
 
 	std::cout << "Thank you for using our phonebook 🤖" << std::endl;

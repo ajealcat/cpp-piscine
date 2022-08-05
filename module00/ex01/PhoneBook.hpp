@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 11:29:28 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/16 11:22:08 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/05 15:05:48 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 # include <iostream>
 # include "Contact.hpp"
 
-class Phonebook 
+class PhoneBook 
 {
 	public:
 
-		Phonebook(void);
-		~Phonebook(void);
+		PhoneBook(void);
+		~PhoneBook(void);
 
 		void create_new_contact(void);
 		void show_contact(void);

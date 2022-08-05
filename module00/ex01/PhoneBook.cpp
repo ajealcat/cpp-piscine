@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 11:27:22 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/06/16 14:55:39 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/05 15:07:24 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 #include <cstdlib>
 #include <iomanip>
 
-Phonebook::Phonebook(void)
+PhoneBook::PhoneBook(void)
 {
 	this->_contact = 0;
 }
 
-Phonebook::~Phonebook(void)
+PhoneBook::~PhoneBook(void)
 {
 }
 
@@ -50,7 +50,7 @@ std::string	get_prompt(std::string const entry)
 	return (input);
 }
 
-void Phonebook::create_new_contact(void)
+void PhoneBook::create_new_contact(void)
 {
 	int	i;
 	
@@ -70,14 +70,14 @@ std::string	resize(std::string const input)
 	return (NULL);
 }
 
-void Phonebook::show_contact(void)
+void PhoneBook::show_contact(void)
 {
 	size_t 		i;
 	std::string	index;
 	
 	for (i = 0 ; i < this->_contact && i < 8 ; i++)
 	{
-		std::cout << std::setw(10) << "[" << i + 1 << "]";
+		std::cout << std::setw(10) << "[" << i + 1 << "]" << " | ";
 		std::cout << std::setw(10) << resize(this->_contact_list[i].get_firstname()) << " | ";
 		std::cout << std::setw(10) << resize(this->_contact_list[i].get_lastname()) << " | ";
 		std::cout << std::setw(10) << resize(this->_contact_list[i].get_nickname()) << std::endl;
