@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 16:23:07 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/05 16:50:03 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/08 11:41:55 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,14 @@ class Zombie
 
 	public:
 
-		Zombie(void);
+		Zombie(std::string name);
 		~Zombie(void);
 
-	void annonce(void);
+	void announce(void) const;
 
 	private:
 
 	std::string	_name;
-	
-
 };
 
 
