@@ -6,12 +6,12 @@
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/11 11:38:45 by ajearuth          #+#    #+#              #
-#    Updated: 2022/08/11 12:02:06 by ajearuth         ###   ########.fr        #
+#    Updated: 2022/08/12 14:28:02 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	execute
-SRCS	=	main.cpp Zombie.cpp 
+SRCS	=	main.cpp Zombie.cpp zombieHorde.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++
 FLAGS	=	-std=c++98 -Wall -Wextra -Werror
