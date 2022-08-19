@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 12:15:03 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/18 18:02:18 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/19 13:47:27 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,17 @@
 
 int main(void)
 {
-	std::string message = "HI THIS IS BRAIN";
-	std::string messagePtr = *message;
-	std::string messageRef = &message;
+	std::string string = "HI THIS IS BRAIN";
+	std::string* stringPtr = &string;
+	std::string& stringRef = string;
 
-
+	std::cout << &string <<std::endl;
+	std::cout << stringPtr << std::endl;
+	std::cout << &stringRef << std::endl;
 	
+	std::cout << string <<std::endl;
+	std::cout << *stringPtr << std::endl;
+	std::cout << stringRef << std::endl;
+
+	return (0);
 }
