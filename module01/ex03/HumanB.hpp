@@ -1,20 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 13:49:15 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/22 14:31:07 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/08/22 13:34:09 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/08/22 14:48:31 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-int main(void)
+# include <iostream>
+# include <string>
+# include "Weapon.hpp"
+
+class HumanB
 {
-	
-}
+
+	public:
+
+		HumanB(Weapon arme, std::string nom);
+		~HumanB();
+
+	void attack(void) const;
+
+	private:
+
+	Weapon 	*_weapon;
+	std::string _name; 	
+
+};
+
+
+#endif /* ********************************************************** HUMANB_H */

@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 13:49:15 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/22 14:31:07 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/08/22 13:04:36 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/08/22 13:14:27 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
 
-int main(void)
+Weapon::Weapon(std::string weapon) : _type(weapon)
 {
-	
-}
+};
+
+Weapon::~Weapon()
+{	
+};
+
+const std::string &Weapon::getType(void) const
+{
+	return(this->_type);
+};
+
+void Weapon::setType(std::string weapon)
+{
+	this->_type = weapon;
+};

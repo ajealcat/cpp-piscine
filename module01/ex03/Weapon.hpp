@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 14:01:36 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/19 14:04:18 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/22 13:08:00 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,17 @@ class Weapon
 {
 	public:
 		
-		Weapon(void);
+		Weapon(std::string weapon = "some other type of club");
 		~Weapon(void);
+
+		const std::string &getType(void) const;
+		void setType(std::string weapon);
 	
 	private:
 	
-}
+	std::string _type;
+	
+};
 
 
 #endif

@@ -1,20 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 13:49:15 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/22 14:31:07 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/08/22 13:15:52 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/08/22 13:26:22 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-int main(void)
+# include <iostream>
+# include <string>
+# include "Weapon.hpp"
+
+class HumanA
 {
+
+	public:
+
+		HumanA(Weapon &arme, std::string nom);
+		~HumanA();
+
+	void attack(void) const;
 	
-}
+	private:
+	
+	Weapon &_weapon;
+	std::string _name;
+
+};
+
+
+#endif /* ********************************************************** HUMANA_H */
