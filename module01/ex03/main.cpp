@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 13:49:15 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/22 14:31:07 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/22 16:59:54 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,23 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int main(void)
+int main()
 {
-	
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob(club, "Bob");
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.attack();
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+return (0);
 }

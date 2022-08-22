@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 13:34:09 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/22 14:48:45 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/22 16:36:28 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-HumanB::HumanB(Weapon arme, std::string nom) : _weapon(arme), _name(nom)
+HumanB::HumanB(std::string nom) : _name(nom)
 {
 }
 
@@ -38,16 +38,22 @@ HumanB::~HumanB()
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+
 void	HumanB::attack(void) const
 {
 	if (this->_weapon == NULL)
-		return ;
-	std::cout << this->_name << " attacks with their " << this->_weapon.getType() << std::endl;
+		std::cout << this->_name << " attacks with nothing because he has no weapon, poor him. Say goodbye to " << this->_name << std::endl;
+	else
+		std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
 }
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+void HumanB::setWeapon(Weapon &arme)
+{
+	this->_weapon = &arme;
+}
 
 /* ************************************************************************** */

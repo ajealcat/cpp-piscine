@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 13:34:09 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/22 14:48:31 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/22 16:36:40 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ class HumanB
 
 	public:
 
-		HumanB(Weapon arme, std::string nom);
+		HumanB(std::string nom);
 		~HumanB();
 
 	void attack(void) const;
+	void setWeapon(Weapon &arme);
 
 	private:
 
