@@ -6,12 +6,13 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 10:00:54 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/24 10:30:15 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/24 15:34:36 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include <string>
 
 int main(int ac, char **av)
 {
