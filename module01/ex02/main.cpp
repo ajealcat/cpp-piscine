@@ -6,12 +6,12 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 12:15:03 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/19 13:47:27 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/24 10:13:46 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
 
 int main(void)
 {
