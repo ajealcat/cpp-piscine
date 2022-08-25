@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 10:00:54 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/08/24 15:34:36 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/08/25 12:03:25 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 #include <fstream>
 #include <string>
 
+int search_n_relace()
+
 int main(int ac, char **av)
 {
 	
 	std::ifstream	ifs;
 	std::ofstream	ofs;
-	
+	char *tm
+
 	if (ac == 4)
 	{
 		ifs.open(av[1]);
@@ -31,7 +34,7 @@ int main(int ac, char **av)
 			ifs.close();
 			return (-1);
 		}
-		
+		getline(ifs, )
 		ofs.close();
 		ifs.close();
 	}
