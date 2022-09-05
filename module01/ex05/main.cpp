@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 12:01:18 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/05 13:08:27 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/05 17:28:38 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ int	main(void)
 	customer.complain("INFO");
 	customer.complain("WARNING");
 	customer.complain("ERROR");
-	customer.complain("LOL");
-	customer.complain("ERROR");
 	customer.complain("INFO");
-	customer.complain("DEBUG");
+	customer.complain("POUET");
 	customer.complain("WARNING");
 	return (EXIT_SUCCESS);
 }

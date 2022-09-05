@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 16:04:37 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/05 16:58:52 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/05 17:27:37 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,16 @@ class Harl
 		Harl();
 		~Harl();
 
-	void complain(std::string level) const;
+	void complain(std::string level);
 
 	private:
 	
-		void	debug(void) const;
-		void	info(void) const;
-		void	warning(void) const;
-		void	error(void) const;
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
 
 };
-
-
-typedef struct s_dict
-{
-	std::string	key;
-	void	(Harl::*f)(void) const;
-}	t_dict;
 
 
 #endif /* ************************************************************ HARL_H */
