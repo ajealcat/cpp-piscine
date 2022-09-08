@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 15:41:57 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/08 15:45:24 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/08 15:50:37 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,4 @@ void Harl::complain(std::string level)
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 			break ;
 	}
-}
 }
