@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 12:01:18 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/08 15:42:57 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/09/08 15:41:33 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/09/08 15:41:46 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
 
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int	main(void)
+# include <iostream>
+# include <string>
+# include <cstdlib>
+
+class Harl
 {
-	Harl	customer;
+
+	public:
+
+		Harl();
+		~Harl();
+
+	void complain(std::string level);
+
+	private:
 	
-	customer.complain("DEBUG");
-	customer.complain("INFO");
-	customer.complain("WARNING");
-	customer.complain("ERROR");
-	customer.complain("INFO");
-	customer.complain("WARNING");
-	customer.complain("POUET");
-	return (EXIT_SUCCESS);
-}
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
+
+};
+
+
+#endif
