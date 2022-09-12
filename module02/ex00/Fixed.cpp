@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 16:30:59 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/12 12:33:06 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/12 20:16:02 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ Fixed::Fixed()
 
 Fixed::Fixed( const Fixed & src )
 {
+	std::cout << "Copy constructor called" << std::endl;
+	*this = src;
 }
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -40,30 +41,23 @@ Fixed::~Fixed()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Fixed &				Fixed::operator=( Fixed const & rhs )
+Fixed &Fixed::operator=( Fixed const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	std::cout << "Copy assignment operator called" << std::endl;
+	this->_value = rhs.getRawBits();
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Fixed const & i )
+
+int 	Fixed::getRawBits(void) const
 {
-	//o << "Value = " << i.getValue();
-	return o;
+	std::cout << "getRawBits member function called" << std::endl;
+	return this->_value;
+	
 }
 
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */
+void	Fixed::setRawBits(int const raw)
+{
+	std::cout << "setRawBits member fonction called" << std::endl;
+	this->_value = raw;
+}
