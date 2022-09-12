@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 16:30:59 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/08 16:31:00 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/12 12:33:06 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 Fixed::Fixed()
 {
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed( const Fixed & src )
@@ -31,6 +32,7 @@ Fixed::Fixed( const Fixed & src )
 
 Fixed::~Fixed()
 {
+	std::cout << "Destructor called" << std::endl;
 }
 
 
