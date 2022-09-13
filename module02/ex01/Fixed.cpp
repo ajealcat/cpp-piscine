@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:22:42 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/13 13:35:34 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/13 14:03:15 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ Fixed::Fixed(Fixed const &src)
 	*this = src;
 }
 
-Fixed::Fixed(const int value)
+Fixed::Fixed(const int value) // prend un entier constant conv en , fixe
 {
 	std::cout << "Int constructor called" << std::endl;
 	this->_value = value << Fixed::_fracBits;
 }
 
-Fixed::Fixed(const float value)
+Fixed::Fixed(const float value) // prend un float conv en , fixe
 {
 	std::cout << "Float constructor called" << std::endl;
 	this->_value = (int)(roundf(value * (1 << Fixed::_fracBits)));
@@ -81,12 +81,12 @@ void	Fixed::setRawBits(int const raw)
 
 float   Fixed::toFloat(void) const
 {
-	return (float)this->_value / (1 << Fixed::_fracBits);
+	return (float)this->_value / (1 << Fixed::_fracBits); //  convertit la valeur en virgule fixe en nombre à virgule flottante
 }
 
 int	 Fixed::toInt(void) const
 {
-	return (int)(this->_value >> Fixed::_fracBits);
+	return (int)(this->_value >> Fixed::_fracBits); // convertit la valeur en virgule fixe en nombre entier
 }
 
 std::ostream &operator<<(std::ostream &o, Fixed const &rhs)
