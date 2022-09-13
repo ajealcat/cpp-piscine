@@ -6,12 +6,12 @@
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/12 20:19:37 by ajearuth          #+#    #+#              #
-#    Updated: 2022/09/12 20:19:49 by ajearuth         ###   ########.fr        #
+#    Updated: 2022/09/13 13:18:27 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	execute
-SRCS	=	main.cpp Harl.cpp
+SRCS	=	main.cpp Fixed.cpp 
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++
 FLAGS	=	-std=c++98 -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:19:49 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/13 11:24:06 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/13 13:26:07 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ private:
 	static const int	_fracBits = 8;
 };
 
-std::ostream &operator<<(std::ostream &o, Fixed const &fixed);
+std::ostream &operator<<(std::ostream &o, Fixed const &rhs);
 
 #endif
