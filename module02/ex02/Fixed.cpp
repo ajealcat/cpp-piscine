@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:12:21 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/14 12:12:38 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/14 14:09:55 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,55 @@ Fixed   &Fixed::operator=(Fixed const &rhs)
 	this->_value = rhs.getRawBits();
 	return *this;
 }
+
+bool	Fixed::operator>(Fixed const &rhs) const
+{
+	if (this->getRawBits() > rhs.getRawBits())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator<(Fixed const &rhs) const
+{
+	if (this->getRawBits() < rhs.getRawBits())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator>=(Fixed const &rhs) const
+{
+	if (this->getRawBits() >= rhs.getRawBits())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator<=(Fixed const &rhs) const
+{
+	if (this->getRawBits() <= rhs.getRawBits())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator==(Fixed const &rhs) const
+{
+	if (this->getRawBits() == rhs.getRawBits())
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator!=(Fixed const &rhs) const
+{
+	if (this->getRawBits() != rhs.getRawBits())
+		return (true);
+	return (false);
+}
+
+Fixed	Fixed::operator+(Fixed const &rhs) const
+{
+	return this->getRawBits() + rhs.getRawBits();
+}
+
+
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
