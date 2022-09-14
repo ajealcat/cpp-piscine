@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:12:21 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/14 14:09:55 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/14 14:14:15 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,21 @@ bool	Fixed::operator!=(Fixed const &rhs) const
 Fixed	Fixed::operator+(Fixed const &rhs) const
 {
 	return this->getRawBits() + rhs.getRawBits();
+}
+
+Fixed	Fixed::operator-(Fixed const &rhs) const
+{
+	return this->getRawBits() - rhs.getRawBits();
+}
+
+Fixed	Fixed::operator*(Fixed const &rhs) const
+{
+	return this->getRawBits() * rhs.getRawBits();
+}
+
+Fixed	Fixed::operator/(Fixed const &rhs) const
+{
+	return this->getRawBits() / rhs.getRawBits();
 }
 
 
