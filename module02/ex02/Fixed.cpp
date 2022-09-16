@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:12:21 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/16 11:56:09 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/16 14:11:45 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,25 @@
 
 Fixed::Fixed(void) : _value(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+//	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &src)
 {
-	std::cout << "Copy constructor called" << std::endl;
+//	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 }
 
 Fixed::Fixed(const int value) // prend un entier constant conv en , fixe
 {
-	std::cout << "Int constructor called" << std::endl;
+//	std::cout << "Int constructor called" << std::endl;
 	this->_value = value << Fixed::_fracBits;
 }
 
 Fixed::Fixed(const float value) // prend un float conv en , fixe
 {
-	std::cout << "Float constructor called" << std::endl;
-	this->_value = (int)(roundf(value * (1 << Fixed::_fracBits)));
+//	std::cout << "Float constructor called" << std::endl;
+	this->_value = (int)(roundf(value * (float)(1 << Fixed::_fracBits)));
 }
 
 /*
@@ -46,7 +46,7 @@ Fixed::Fixed(const float value) // prend un float conv en , fixe
 
 Fixed::~Fixed(void)
 {
-	std::cout << "Destructor called" << std::endl;
+//	std::cout << "Destructor called" << std::endl;
 }
 
 /*
@@ -55,7 +55,7 @@ Fixed::~Fixed(void)
 
 Fixed   &Fixed::operator=(Fixed const &rhs)
 {
-	std::cout << "Copy assignment operator called" << std::endl;	
+//	std::cout << "Copy assignment operator called" << std::endl;	
 	this->_value = rhs.getRawBits();
 	return *this;
 }
@@ -106,22 +106,22 @@ bool	Fixed::operator!=(Fixed const &rhs) const
 
 Fixed	Fixed::operator+(Fixed const &rhs) const
 {
-	return this->getRawBits() + rhs.getRawBits();
+	return Fixed(this->toFloat() + rhs.toFloat());;
 }
 
 Fixed	Fixed::operator-(Fixed const &rhs) const
 {
-	return this->getRawBits() - rhs.getRawBits();
+	return Fixed(this->toFloat() - rhs.toFloat());;
 }
 
 Fixed	Fixed::operator*(Fixed const &rhs) const
 {
-	return this->getRawBits() * rhs.getRawBits();
+	return Fixed(this->toFloat() * rhs.toFloat());
 }
 
 Fixed	Fixed::operator/(Fixed const &rhs) const
 {
-	return this->getRawBits() / rhs.getRawBits();
+	return Fixed(this->toFloat() / rhs.toFloat());
 }
 
 // ----------------------------------------------------------------------- //
@@ -200,7 +200,7 @@ void	Fixed::setRawBits(int const raw)
 
 float   Fixed::toFloat(void) const
 {
-	return (float)this->_value / (1 << Fixed::_fracBits); //  convertit la valeur en virgule fixe en nombre à virgule flottante
+	return (float)this->_value / (float)(1 << Fixed::_fracBits); //  convertit la valeur en virgule fixe en nombre à virgule flottante
 }
 
 int	 Fixed::toInt(void) const
