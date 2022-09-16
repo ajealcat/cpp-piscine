@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:12:21 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/14 14:14:15 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/16 11:56:09 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ Fixed   &Fixed::operator=(Fixed const &rhs)
 	this->_value = rhs.getRawBits();
 	return *this;
 }
+
+// ------------------------------------------------------------------------ //
 
 bool	Fixed::operator>(Fixed const &rhs) const
 {
@@ -122,6 +124,58 @@ Fixed	Fixed::operator/(Fixed const &rhs) const
 	return this->getRawBits() / rhs.getRawBits();
 }
 
+// ----------------------------------------------------------------------- //
+
+Fixed	&Fixed::operator++(void)
+{
+	this->setRawBits(this->getRawBits() + 1);
+	return *this;
+}
+
+Fixed	&Fixed::operator--(void)
+{
+	this->setRawBits(this->getRawBits() - 1);
+	return *this;
+}
+
+Fixed	Fixed::operator++(int)
+{
+	Fixed	tmp = *this;
+	++*this;
+	return tmp;
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed	tmp = *this;
+	--*this;
+	return tmp;
+}
+
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return a;
+	return b;
+}
+Fixed const	&Fixed::max(Fixed const &a, Fixed const &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return a;
+	return b;
+}
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return a;
+	return b;
+}
+Fixed const &Fixed::min(Fixed const &a, Fixed const &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return a;
+	return b;
+}
 
 
 /*
