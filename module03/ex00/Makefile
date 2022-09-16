@@ -6,13 +6,13 @@
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/16 14:19:49 by ajearuth          #+#    #+#              #
-#    Updated: 2022/09/16 14:21:21 by ajearuth         ###   ########.fr        #
+#    Updated: 2022/09/16 16:24:13 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME	=	execute
-SRCS	=	
+SRCS	=	main.cpp ClapTrap.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++
 FLAGS	=	-std=c++98 -Wall -Wextra -Werror
