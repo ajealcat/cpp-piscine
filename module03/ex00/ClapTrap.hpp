@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:21:56 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/16 16:30:03 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/19 14:57:33 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,33 @@ class ClapTrap
 
 	public:
 
-		ClapTrap(std::string _name = "default");
+		ClapTrap(std::string name = "Default");
 		ClapTrap(ClapTrap const & src);  // constructeur par copie
 		~ClapTrap();
 
 		ClapTrap	&operator=(ClapTrap const &rhs); // operateur d'assignation
 	
-		void attack(const std::string& target);
+
+		std::string		getName(void) const;
+		unsigned int	getHitPoints(void) const;
+		unsigned int	getEnergyPoints(void) const;
+		unsigned int	getAttackDamage(void) const;
+
+		void		setHitPoints(unsigned int new_HP);
+	
+		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		
 	private:
 
 		std::string _name;
-		int			_Hitpoints = 10;
-		int			_Energypoints = 10;
-		int			_Attackdamage = 0; 
+		unsigned int			_Hitpoints;
+		unsigned int			_Energypoints;
+		unsigned int			_Attackdamage; 
 
 };
+
+std::ostream &operator<<( std::ostream &o, ClapTrap const &i);
 
 #endif 
