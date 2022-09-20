@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:22:06 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/20 11:07:36 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/20 14:02:12 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,31 +74,40 @@ void		ClapTrap::setHitPoints(unsigned int new_HP)
 
 void    ClapTrap::attack(std::string const &target)
 {
-    std::cout << "ClapTrap " << this->getName();
-    std::cout << " attack " << target;
-    std::cout << ", causing " << this->getAttackDamage();
-    std::cout << " points of damage !" << std::endl;
+	if (this->getEnergyPoints() > 0 && this->getHitPoints() > 0)
+	{
+    	std::cout << "ClapTrap " << this->getName();
+		std::cout << " attack " << target;
+		std::cout << ", causing " << this->getAttackDamage();
+    	std::cout << " points of damage !" << std::endl;
+	}
 }
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-    int damage = (int)this->getHitPoints() - (int)amount;
-    if (damage < 0)
-        damage = 0;
-    std::cout << "ClapTrap "  << this->getName();
-    std::cout << " take " << amount << " damage !" << std::endl;
-    this->setHitPoints(damage);
-    std::cout << "Hit points left: ";
-    std::cout << this->getHitPoints() << std::endl;
+	if (this->getEnergyPoints() > 0 && this->getHitPoints() > 0)
+	{
+		int damage = (int)this->getHitPoints() - (int)amount;
+		if (damage < 0)
+			damage = 0;
+		std::cout << "ClapTrap "  << this->getName();
+		std::cout << " take " << amount << " damage !" << std::endl;
+		this->setHitPoints(damage);
+		std::cout << "Hit points left: ";
+		std::cout << this->getHitPoints() << std::endl;
+	}
 }
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
-    std::cout << "ClapTrap "  << this->_name;
-    std::cout << " is repaired for " << amount << " hit points !" << std::endl;
-    this->setHitPoints(this->_Hitpoints + amount);
-    std::cout << "Hit points left: ";
-    std::cout << this->getHitPoints() << std::endl;
+	if (this->getEnergyPoints() > 0 && this->getHitPoints() > 0)
+	{
+		std::cout << "ClapTrap "  << this->_name;
+		std::cout << " is repaired for " << amount << " hit points !" << std::endl;
+		this->setHitPoints(this->_Hitpoints + amount);
+		std::cout << "Hit points left: ";
+		std::cout << this->getHitPoints() << std::endl;
+	}
 }
 
 /*
