@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:36:48 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/20 15:47:42 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/20 16:27:32 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void    ScavTrap::attack(std::string const &target)
 		std::cout << " attack " << target;
 		std::cout << ", causing " << this->getAttackDamage();
     	std::cout << " points of damage !" << std::endl;
+		this->_Energypoints--;
 	}
 }
 
