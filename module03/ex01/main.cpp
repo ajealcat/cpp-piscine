@@ -5,30 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 14:21:39 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/20 15:48:10 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/09/20 14:20:41 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/09/20 15:49:59 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <string>
 #include <iostream>
 
 int main()
 {
-	ClapTrap ct1("Pikachu");
-	ClapTrap ct2("Onix");
-	ClapTrap ct3(ct2);
+	ScavTrap st1("Pikachu");
+	ScavTrap st2("Onix");
+	ScavTrap st3(st2);
 	
-	std::cout << ct1.getName() << std::endl;
-	std::cout << ct2.getName() << std::endl;
-	std::cout << ct3.getName() << std::endl;
+	std::cout << st1.getName() << std::endl;
+	std::cout << st2.getName() << std::endl;
+	std::cout << st3.getName() << std::endl;
 
-	ct1.attack("Thunder Shock");
-	ct2.takeDamage(0);
-	ct1.beRepaired(10);
-	ct1.takeDamage(100);
-	std::cout << ct1.getEnergyPoints() << std::endl;
-	std::cout << ct1.getAttackDamage() << std::endl;
-	std::cout << ct1.getHitPoints() << std::endl;
+	st1.attack("Thunder Shock");
+	st2.takeDamage(0);
+	st1.beRepaired(10);
+	st1.takeDamage(100);
+	st1.attack("normalement il peut pas");
+	st1.guardGate();
+	std::cout << st1.getEnergyPoints() << std::endl;
+	std::cout << st1.getAttackDamage() << std::endl;
+	std::cout << st1.getHitPoints() << std::endl;
 }
