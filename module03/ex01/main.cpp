@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:20:41 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/20 16:46:48 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/20 16:49:50 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int main()
 	st2.takeDamage(20);
 	st1.beRepaired(10);
 	st1.takeDamage(100);
+	st1.attack("normalement il peut pas");
 	st1.guardGate();
 	std::cout << st1.getEnergyPoints() << std::endl;
 	std::cout << st1.getAttackDamage() << std::endl;

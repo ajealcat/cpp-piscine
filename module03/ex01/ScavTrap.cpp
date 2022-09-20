@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:36:48 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/20 16:27:32 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/20 16:49:18 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ std::ostream &			operator<<( std::ostream & o, ScavTrap const & i )
 
 void    ScavTrap::attack(std::string const &target)
 {
-	if (this->getEnergyPoints() > 0 && this->getHitPoints() > 0)
+	if (this->getHitPoints() > 0 && this->getEnergyPoints() > 0)
 	{
     	std::cout << "ScavTrap " << this->getName();
 		std::cout << " attack " << target;
