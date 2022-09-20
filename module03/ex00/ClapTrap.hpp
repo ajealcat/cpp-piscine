@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:21:56 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/19 14:57:33 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/19 17:15:17 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class ClapTrap
 		
 	private:
 
-		std::string _name;
+		std::string				 _name;
 		unsigned int			_Hitpoints;
 		unsigned int			_Energypoints;
 		unsigned int			_Attackdamage; 

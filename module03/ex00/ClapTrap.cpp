@@ -6,10 +6,9 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:22:06 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/19 14:32:07 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/20 11:07:36 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ClapTrap.hpp"
 
@@ -66,6 +65,12 @@ std::ostream &operator<<(std::ostream &o, ClapTrap const &i)
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+
+void		ClapTrap::setHitPoints(unsigned int new_HP)
+{
+	this->_Hitpoints = new_HP;
+}
+
 
 void    ClapTrap::attack(std::string const &target)
 {

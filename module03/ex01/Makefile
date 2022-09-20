@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/13 14:10:53 by ajearuth          #+#    #+#              #
-#    Updated: 2022/09/19 16:49:50 by ajearuth         ###   ########.fr        #
+#    Created: 2022/09/19 16:44:11 by ajearuth          #+#    #+#              #
+#    Updated: 2022/09/19 16:44:26 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME	=	execute
 SRCS	=	main.cpp Fixed.cpp 
