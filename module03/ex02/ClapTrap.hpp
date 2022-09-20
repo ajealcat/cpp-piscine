@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:21:08 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/20 15:44:03 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/20 16:42:09 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ class ClapTrap
 		unsigned int			_Energypoints;
 		unsigned int			_Attackdamage; 
 
-	
-	
 };
 
 std::ostream &operator<<( std::ostream &o, ClapTrap const &i);

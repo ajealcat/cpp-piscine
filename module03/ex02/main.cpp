@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:20:41 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/20 16:24:35 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/20 16:38:10 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,13 @@ int main()
 	ft1.beRepaired(10);
 	ft1.takeDamage(100);
 	st1.guardGate();
+
+	// int i = 0;
+	// while(i < 100)
+	// {
+	// 	ft1.attack("Pikachu GO");
+	// 	i++;
+	// }
 	std::cout << ft1.getEnergyPoints() << std::endl;
 	std::cout << ft1.getAttackDamage() << std::endl;
 	std::cout << ft1.getHitPoints() << std::endl;
