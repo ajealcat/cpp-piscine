@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 14:43:53 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 15:06:47 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/09/21 17:12:07 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/09/22 15:31:44 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "Cat.hpp"
 
-WrongCat::WrongCat()
+/*
+** ------------------------------- CONSTRUCTOR --------------------------------
+*/
+
+Cat::Cat()
 {
-	this->_type = "Wrong Cat";
-	std::cout << "Default Wrongcat constructor called" << std::endl;
+	this->_type = "Cat";
+	this->_brain = newBrain();
+	std::cout << "Default cat constructor called" << std::endl;
 }
 
-WrongCat::WrongCat( const WrongCat & src )
+Cat::Cat( const Cat & src )
 {
-	std::cout << "Copy wrong cat constructor called" << std::endl;
+	std::cout << "Copy cat constructor called" << std::endl;
 	*this = src;
 }
 
@@ -29,9 +34,10 @@ WrongCat::WrongCat( const WrongCat & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-WrongCat::~WrongCat()
+Cat::~Cat()
 {
-		std::cout << "Wrong Cat destructor called" << std::endl;
+		delete this->_brain;
+		std::cout << "Cat destructor called" << std::endl;
 }
 
 
@@ -39,7 +45,7 @@ WrongCat::~WrongCat()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-WrongCat &				WrongCat::operator=( WrongCat const & rhs )
+Cat &				Cat::operator=( Cat const & rhs )
 {
 	if ( this != &rhs )
 	{
@@ -52,15 +58,10 @@ WrongCat &				WrongCat::operator=( WrongCat const & rhs )
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void	WrongCat::makeSound(void) const
+void	Cat::makeSound(void) const
 {
 	std::cout << "MiaaaaaOoOoUuUuU" << std::endl;
 }
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

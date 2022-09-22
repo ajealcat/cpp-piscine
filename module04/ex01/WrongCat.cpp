@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:43:53 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 15:06:47 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:46:06 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 WrongCat::WrongCat()
 {
-	this->_type = "Wrong Cat";
+	this->_type = "WrongCat";
 	std::cout << "Default Wrongcat constructor called" << std::endl;
 }
 
 WrongCat::WrongCat( const WrongCat & src )
 {
-	std::cout << "Copy wrong cat constructor called" << std::endl;
+	std::cout << "Copy Wrongcat constructor called" << std::endl;
 	*this = src;
 }
 
@@ -31,7 +31,7 @@ WrongCat::WrongCat( const WrongCat & src )
 
 WrongCat::~WrongCat()
 {
-		std::cout << "Wrong Cat destructor called" << std::endl;
+		std::cout << "WrongCat destructor called" << std::endl;
 }
 
 

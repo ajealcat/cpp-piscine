@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 14:43:53 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 15:06:47 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/09/21 17:09:24 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/09/22 13:58:47 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "Animal.hpp"
 
-WrongCat::WrongCat()
+/*
+** ------------------------------- CONSTRUCTOR --------------------------------
+*/
+
+Animal::Animal(std::string species)
 {
-	this->_type = "Wrong Cat";
-	std::cout << "Default Wrongcat constructor called" << std::endl;
+	this->_type = species;
+	std::cout << "Default animal constructor called" << std::endl;
 }
 
-WrongCat::WrongCat( const WrongCat & src )
+Animal::Animal(const Animal &src)
 {
-	std::cout << "Copy wrong cat constructor called" << std::endl;
+	std::cout << "Copy animal constructor called" << std::endl;
 	*this = src;
 }
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-WrongCat::~WrongCat()
+Animal::~Animal()
 {
-		std::cout << "Wrong Cat destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 }
 
 
@@ -39,32 +42,39 @@ WrongCat::~WrongCat()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-WrongCat &				WrongCat::operator=( WrongCat const & rhs )
+Animal &Animal::operator=( Animal const &rhs )
 {
-	if ( this != &rhs )
+	if (this != &rhs)
 	{
 		this->_type = rhs.getType();
 	}
+	std::cout << "Copy assignment operator called" << std::endl;
 	return *this;
 }
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-void	WrongCat::makeSound(void) const
+std::ostream &			operator<<( std::ostream & o, Animal const & i )
 {
-	std::cout << "MiaaaaaOoOoUuUuU" << std::endl;
+	o << "Animal type = " << i.getType();
+	return o;
 }
 
+
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void	Animal::makeSound(void) const
+{
+	std::cout << "GrrrraaaOoOouUuUu" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+std::string 	const &Animal::getType(void) const
+{
+	return this->_type;
+}
 
 /* ************************************************************************** */

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 14:43:53 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 15:06:47 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/09/22 15:05:35 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/09/22 15:05:36 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
-WrongCat::WrongCat()
+/*
+** ------------------------------- CONSTRUCTOR --------------------------------
+*/
+
+Brain::Brain()
 {
-	this->_type = "Wrong Cat";
-	std::cout << "Default Wrongcat constructor called" << std::endl;
 }
 
-WrongCat::WrongCat( const WrongCat & src )
+Brain::Brain( const Brain & src )
 {
-	std::cout << "Copy wrong cat constructor called" << std::endl;
-	*this = src;
 }
 
 
@@ -29,9 +29,8 @@ WrongCat::WrongCat( const WrongCat & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-WrongCat::~WrongCat()
+Brain::~Brain()
 {
-		std::cout << "Wrong Cat destructor called" << std::endl;
 }
 
 
@@ -39,23 +38,21 @@ WrongCat::~WrongCat()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-WrongCat &				WrongCat::operator=( WrongCat const & rhs )
+Brain &				Brain::operator=( Brain const & rhs )
 {
-	if ( this != &rhs )
-	{
-		this->_type = rhs.getType();
-	}
+	//if ( this != &rhs )
+	//{
+		//this->_value = rhs.getValue();
+	//}
 	return *this;
 }
 
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-void	WrongCat::makeSound(void) const
+std::ostream &			operator<<( std::ostream & o, Brain const & i )
 {
-	std::cout << "MiaaaaaOoOoUuUuU" << std::endl;
+	//o << "Value = " << i.getValue();
+	return o;
 }
+
 
 /*
 ** --------------------------------- METHODS ----------------------------------

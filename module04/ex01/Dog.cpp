@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 14:43:53 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 15:06:47 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/09/21 17:12:18 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/09/22 15:32:47 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "Dog.hpp"
 
-WrongCat::WrongCat()
+/*
+** ------------------------------- CONSTRUCTOR --------------------------------
+*/
+
+Dog::Dog()
 {
-	this->_type = "Wrong Cat";
-	std::cout << "Default Wrongcat constructor called" << std::endl;
+	this->_type = "Dog";
+	this->_brain = newBrain();
+	std::cout << "Default dog constructor called" << std::endl;
 }
 
-WrongCat::WrongCat( const WrongCat & src )
+Dog::Dog( const Dog & src )
 {
-	std::cout << "Copy wrong cat constructor called" << std::endl;
+	std::cout << "Copy dog constructor called" << std::endl;
 	*this = src;
 }
 
@@ -29,9 +34,10 @@ WrongCat::WrongCat( const WrongCat & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-WrongCat::~WrongCat()
+Dog::~Dog()
 {
-		std::cout << "Wrong Cat destructor called" << std::endl;
+	delete _brain;
+	std::cout << "Dog destructor called" << std::endl;
 }
 
 
@@ -39,7 +45,7 @@ WrongCat::~WrongCat()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-WrongCat &				WrongCat::operator=( WrongCat const & rhs )
+Dog &Dog::operator=( Dog const & rhs )
 {
 	if ( this != &rhs )
 	{
@@ -51,16 +57,10 @@ WrongCat &				WrongCat::operator=( WrongCat const & rhs )
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
-
-void	WrongCat::makeSound(void) const
+void	Dog::makeSound(void) const
 {
-	std::cout << "MiaaaaaOoOoUuUuU" << std::endl;
+	std::cout << "WooOoOoOuUuUuF" << std::endl;
 }
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
