@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:12:18 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/21 17:12:19 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:59:11 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,14 @@
 
 Dog::Dog()
 {
+	this->_type = "Dog";
+	std::cout << "Default dog constructor called" << std::endl;
 }
 
 Dog::Dog( const Dog & src )
 {
+	std::cout << "Copy dog constructor called" << std::endl;
+	*this = src;
 }
 
 
@@ -31,6 +35,7 @@ Dog::Dog( const Dog & src )
 
 Dog::~Dog()
 {
+	std::cout << "Dog destructor called" << std::endl;
 }
 
 
@@ -40,24 +45,20 @@ Dog::~Dog()
 
 Dog &				Dog::operator=( Dog const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		this->_type = rhs.getType();
+	}
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, Dog const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
-
+void	Dog::makeSound(void) const
+{
+	std::cout << "WooOoOoOuUuUuF" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

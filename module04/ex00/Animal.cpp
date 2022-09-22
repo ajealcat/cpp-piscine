@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:09:24 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/21 17:09:25 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:58:47 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Animal::Animal()
+Animal::Animal(std::string species)
 {
+	this->_type = species;
+	std::cout << "Default animal constructor called" << std::endl;
 }
 
-Animal::Animal( const Animal & src )
+Animal::Animal(const Animal &src)
 {
+	std::cout << "Copy animal constructor called" << std::endl;
+	*this = src;
 }
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -31,6 +34,7 @@ Animal::Animal( const Animal & src )
 
 Animal::~Animal()
 {
+	std::cout << "Animal destructor called" << std::endl;
 }
 
 
@@ -38,18 +42,19 @@ Animal::~Animal()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Animal &				Animal::operator=( Animal const & rhs )
+Animal &Animal::operator=( Animal const &rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if (this != &rhs)
+	{
+		this->_type = rhs.getType();
+	}
+	std::cout << "Copy assignment operator called" << std::endl;
 	return *this;
 }
 
 std::ostream &			operator<<( std::ostream & o, Animal const & i )
 {
-	//o << "Value = " << i.getValue();
+	o << "Animal type = " << i.getType();
 	return o;
 }
 
@@ -58,10 +63,18 @@ std::ostream &			operator<<( std::ostream & o, Animal const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void	Animal::makeSound(void) const
+{
+	std::cout << "GrrrraaaOoOouUuUu" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+std::string 	const &Animal::getType(void) const
+{
+	return this->_type;
+}
 
 /* ************************************************************************** */

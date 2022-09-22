@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 17:12:07 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 13:59:19 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/09/22 14:43:53 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/09/22 14:46:06 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
-Cat::Cat()
+WrongCat::WrongCat()
 {
-	this->_type = "Cat";
-	std::cout << "Default cat constructor called" << std::endl;
+	this->_type = "WrongCat";
+	std::cout << "Default Wrongcat constructor called" << std::endl;
 }
 
-Cat::Cat( const Cat & src )
+WrongCat::WrongCat( const WrongCat & src )
 {
-	std::cout << "Copy cat constructor called" << std::endl;
+	std::cout << "Copy Wrongcat constructor called" << std::endl;
 	*this = src;
 }
 
@@ -33,9 +29,9 @@ Cat::Cat( const Cat & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-		std::cout << "Cat destructor called" << std::endl;
+		std::cout << "WrongCat destructor called" << std::endl;
 }
 
 
@@ -43,7 +39,7 @@ Cat::~Cat()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Cat &				Cat::operator=( Cat const & rhs )
+WrongCat &				WrongCat::operator=( WrongCat const & rhs )
 {
 	if ( this != &rhs )
 	{
@@ -56,10 +52,15 @@ Cat &				Cat::operator=( Cat const & rhs )
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void	Cat::makeSound(void) const
+void	WrongCat::makeSound(void) const
 {
 	std::cout << "MiaaaaaOoOoUuUuU" << std::endl;
 }
+
+/*
+** --------------------------------- METHODS ----------------------------------
+*/
+
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

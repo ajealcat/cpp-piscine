@@ -6,12 +6,12 @@
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 13:39:39 by ajearuth          #+#    #+#              #
-#    Updated: 2022/09/21 17:00:05 by ajearuth         ###   ########.fr        #
+#    Updated: 2022/09/22 14:50:08 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	execute
-SRCS	=	main.cpp
+SRCS	=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++
 FLAGS	=	-std=c++98 -Wall -Wextra -Werror
