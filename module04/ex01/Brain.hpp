@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:05:35 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 15:29:54 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/23 13:58:23 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ class Brain
 		~Brain();
 
 		Brain &		operator=( Brain const & rhs );
-		
+
+		std::string getIdeas(int idea);
+        void setIdea(std::string str, int idea);
 
 	private:
 	
