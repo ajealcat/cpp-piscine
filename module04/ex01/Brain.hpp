@@ -6,7 +6,7 @@
 /*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:05:35 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/23 13:58:23 by anna             ###   ########.fr       */
+/*   Updated: 2022/09/25 17:28:02 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Brain
 
 		Brain &		operator=( Brain const & rhs );
 
-		std::string getIdeas(int idea);
-        void setIdea(std::string str, int idea);
+		std::string getIdeas(int idea) const;
+        void 		setIdeas(std::string str, int idea);
 
 	private:
 	

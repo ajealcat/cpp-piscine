@@ -6,7 +6,7 @@
 /*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:12:07 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/23 13:58:23 by anna             ###   ########.fr       */
+/*   Updated: 2022/09/25 17:52:26 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ Cat &				Cat::operator=( Cat const & rhs )
 	if ( this != &rhs )
 	{
 		this->_type = rhs.getType();
-
+		*(this->_brain) = *(rhs.getBrain());
 	}
 	return *this;
 }
@@ -69,5 +69,9 @@ void	Cat::makeSound(void) const
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+Brain* Cat::getBrain(void) const
+{
+	return this->_brain;
+}
 
 /* ************************************************************************** */

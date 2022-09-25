@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:12:18 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/22 15:32:47 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/25 17:46:55 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@
 Dog::Dog()
 {
 	this->_type = "Dog";
-	this->_brain = newBrain();
+	this->_brain = new Brain();
 	std::cout << "Default dog constructor called" << std::endl;
 }
 
 Dog::Dog( const Dog & src )
 {
 	std::cout << "Copy dog constructor called" << std::endl;
+	this->_brain = new Brain();
 	*this = src;
 }
 
@@ -36,7 +37,7 @@ Dog::Dog( const Dog & src )
 
 Dog::~Dog()
 {
-	delete _brain;
+	delete this->_brain;
 	std::cout << "Dog destructor called" << std::endl;
 }
 
@@ -50,6 +51,7 @@ Dog &Dog::operator=( Dog const & rhs )
 	if ( this != &rhs )
 	{
 		this->_type = rhs.getType();
+		*(this->_brain) = *(rhs.getBrain());
 	}
 	return *this;
 }
@@ -65,6 +67,11 @@ void	Dog::makeSound(void) const
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
+
+Brain* Dog::getBrain(void) const
+{
+	return this->_brain;
+}
 
 
 /* ************************************************************************** */
