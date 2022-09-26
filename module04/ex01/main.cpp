@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:16:05 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/25 17:57:59 by anna             ###   ########.fr       */
+/*   Updated: 2022/09/26 12:06:16 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main()
 	
 */
 
-/*
+
 
 	Dog* Voltoutou = new Dog();
 	Cat* Miaous = new Cat();
@@ -76,7 +76,7 @@ int main()
 	delete Azazel;
 	delete Belial;
 
-*/
+/*
 
 	Animal *Club[4];
 
@@ -87,9 +87,7 @@ int main()
 		else 
 			Club[i] = new Dog;
 	}
-
-	for (int i = 4 ; i >= 0; i--)
+	for (int i = 3 ; i >= 0; i--)
 		delete Club[i];
-	
-	return 0;
+*/	return 0;
 }
