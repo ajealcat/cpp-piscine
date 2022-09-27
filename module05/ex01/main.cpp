@@ -6,11 +6,12 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/27 18:10:03 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/27 18:14:52 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 
 int main(void)
