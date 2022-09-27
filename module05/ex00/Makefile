@@ -6,12 +6,12 @@
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/26 12:23:27 by ajearuth          #+#    #+#              #
-#    Updated: 2022/09/26 17:33:43 by ajearuth         ###   ########.fr        #
+#    Updated: 2022/09/27 17:36:19 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	execute
-SRCS	=	main.cpp 
+SRCS	=	main.cpp Bureaucrat.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++
 FLAGS	=	-std=c++98 -Wall -Wextra -Werror
