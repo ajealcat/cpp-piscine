@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:14:23 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 14:26:21 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 19:13:46 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ class Form
 
 		Form(std::string const &name = "default_form", int const grade_sign = 1, int const grade_exec = 1 );
 		Form( Form const & src );
-		~Form();
+		virtual ~Form();
 
-		Form &		operator=( Form const & rhs );
+		virtual Form &		operator=( Form const & rhs );
 		std::string const &getName( void ) const;
 		bool	getSigned( void ) const;
 		int		getGradetosign( void ) const;

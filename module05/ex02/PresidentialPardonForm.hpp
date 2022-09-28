@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:01:28 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 15:01:29 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 19:32:47 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,25 @@
 
 # include <iostream>
 # include <string>
+# include "Form.hpp"
 
-class PresidentialPardonForm
+class PresidentialPardonForm : public Form
 {
 
 	public:
 
-		PresidentialPardonForm();
+		PresidentialPardonForm( std::string target = "Macaron" );
 		PresidentialPardonForm( PresidentialPardonForm const & src );
-		~PresidentialPardonForm();
+		virtual ~PresidentialPardonForm();
 
-		PresidentialPardonForm &		operator=( PresidentialPardonForm const & rhs );
+		virtual PresidentialPardonForm &operator=( PresidentialPardonForm const & rhs );
+		std::string	const &getTarget( void ) const;
+		virtual void	doit( void ) const;
+
 
 	private:
 
+		std::string _target;
 };
 
 std::ostream &			operator<<( std::ostream & o, PresidentialPardonForm const & i );

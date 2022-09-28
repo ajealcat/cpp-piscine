@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:01:27 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 15:01:28 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 19:34:51 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
-
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-PresidentialPardonForm::PresidentialPardonForm()
+PresidentialPardonForm::PresidentialPardonForm( std::string target ) : Form("Presidential Pardon", 25, 5), _target(target)
 {
+	std::cout << "Default constructor PresidentialPardonForm created" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src )
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src ) : Form(src), _target(src._target)
 {
-}
+		std::cout << "Copy constructor PresidentialPardonForm created" << std::endl;
 
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -31,8 +32,9 @@ PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & s
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-}
+	std::cout << "PresidentialPardonForm deleted" << std::endl;
 
+}
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
@@ -40,28 +42,30 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 PresidentialPardonForm &				PresidentialPardonForm::operator=( PresidentialPardonForm const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		*(Form *)this = rhs;
+		this->_target = rhs.getTarget();
+	}
 	return *this;
 }
-
-std::ostream &			operator<<( std::ostream & o, PresidentialPardonForm const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void	PresidentialPardonForm::doit( void ) const
+{
+	std::cout << this->_target << " has been forgiven by Zaphod Beeblebrox!" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+std::string	const & PresidentialPardonForm::getTarget( void ) const
+{
+	return (this->_target);
+}
 
 /* ************************************************************************** */

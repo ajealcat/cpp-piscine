@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:00:21 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 15:00:22 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 19:37:34 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,26 @@
 
 # include <iostream>
 # include <string>
+# include <fstream>
+# include "Form.hpp"
 
-class ShrubberyCreationForm
+class ShrubberyCreationForm : public Form
 {
-
 	public:
 
-		ShrubberyCreationForm();
+		ShrubberyCreationForm( std::string target = "Happy Tree" );
 		ShrubberyCreationForm( ShrubberyCreationForm const & src );
-		~ShrubberyCreationForm();
+		virtual ~ShrubberyCreationForm();
 
-		ShrubberyCreationForm &		operator=( ShrubberyCreationForm const & rhs );
+		virtual ShrubberyCreationForm &		operator=( ShrubberyCreationForm const & rhs );
+
+		virtual void	doit( void ) const;
+
+		std::string	const & getTarget( void ) const;
 
 	private:
 
+		std::string	_target;
 };
-
-std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i );
 
 #endif /* ******************************************* SHRUBBERYCREATIONFORM_H */
