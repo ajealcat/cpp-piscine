@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 14:52:30 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 14:33:05 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ int main(void)
 	Form One("Boss File", 1, 1);
 	Form Two("For le Stagiaire", 150, 150);
 	Form Three("Secret execution file", 150, 1);
-	Form Five("SECRET FILE", 5, 7);
 
 	Bureaucrat a("Vi", 1);
 	Bureaucrat b("Jinx", 50);
 	Bureaucrat c("Teemo", 150);
-	Bureaucrat d("Aphelios", 6);
 	
 	try
 	{
@@ -37,10 +35,10 @@ int main(void)
 	try
 	{
 		b.signForm(Three);
-		b.promote();
-		std::cout << b << std::endl;
-		b.demote();
-		std::cout << b << std::endl;
+		// b.promote();
+		// std::cout << b << std::endl;
+		// b.demote();
+		// std::cout << b << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -50,18 +48,6 @@ int main(void)
 	{
 		Form Four("Negatif", 0, -1);
 		a.signForm(Four);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	try
-	{
-		d.signForm(Five);
-		d.promote();
-		std::cout << d << std::endl;
-		d.signForm(Five);
-
 	}
 	catch(const std::exception& e)
 	{
