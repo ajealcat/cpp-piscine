@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:14:23 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 11:55:54 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 14:26:21 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <string>
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -31,7 +33,7 @@ class Form
 		bool	getSigned( void ) const;
 		int		getGradetosign( void ) const;
 		int		getGradetoexec( void ) const;
-		void	beSigned( Bureaucrat &someone ); 
+		void	beSigned(const Bureaucrat &someone ); 
 
 
 	private:

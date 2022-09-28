@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 12:51:31 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 14:33:05 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,17 @@
 
 int main(void)
 {
-	Form One("Only the boss", 1, 1);
+	Form One("Boss File", 1, 1);
 	Form Two("For le Stagiaire", 150, 150);
-	Form Three("You can sign but not exec", 150, 1);
-	Form Four("Negatif", 0, -1);
-	Form Five("Too low", 4010, 4010);
+	Form Three("Secret execution file", 150, 1);
 
+	Bureaucrat a("Vi", 1);
+	Bureaucrat b("Jinx", 50);
+	Bureaucrat c("Teemo", 150);
+	
 	try
 	{
-		Bureaucrat a("Vi", 1);
-		a.promote();
-		std::cout << a << std::endl;
-		a.demote();
-		std::cout << a << std::endl;
+		a.signForm(One);
 	}
 	catch(const std::exception& e)
 	{
@@ -36,11 +34,11 @@ int main(void)
 	}
 	try
 	{
-		Bureaucrat b("Jinx", 50);
-		b.promote();
-		std::cout << b << std::endl;
-		b.demote();
-		std::cout << b << std::endl;
+		b.signForm(Three);
+		// b.promote();
+		// std::cout << b << std::endl;
+		// b.demote();
+		// std::cout << b << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -48,11 +46,8 @@ int main(void)
 	}	
 	try
 	{
-		Bureaucrat c("Teemo", 150);
-		c.promote();
-		std::cout << c << std::endl;
-		c.demote();
-		std::cout << c << std::endl;
+		Form Four("Negatif", 0, -1);
+		a.signForm(Four);
 	}
 	catch(const std::exception& e)
 	{
@@ -60,11 +55,10 @@ int main(void)
 	}
 	try
 	{
-		Bureaucrat d("Aphelios", -10);
-		d.promote();
-		std::cout << d << std::endl;
-		d.demote();
-		std::cout << d << std::endl;
+		c.promote();
+		std::cout << c << std::endl;
+		c.demote();
+		std::cout << c << std::endl;
 	}
 	catch(const std::exception& e)
 	{

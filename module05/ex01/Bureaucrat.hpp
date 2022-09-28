@@ -6,6 +6,8 @@
 # include <stdexcept>
 # include "Form.hpp"
 
+class Form;
+
 class Bureaucrat
 {
 
@@ -21,7 +23,7 @@ class Bureaucrat
 		void	demote( void );
 		std::string const	&getName() const;
 		int					getGrade() const;
-		void	signForm( Form &paper ) const;
+		void	signForm(Form &paper ) const;
 
 
 

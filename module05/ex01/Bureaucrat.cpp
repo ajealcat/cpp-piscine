@@ -56,6 +56,19 @@ std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void	Bureaucrat::signForm(Form &paper) const
+{
+	try 
+	{
+		paper.beSigned(*this);
+        std::cout << this->getName() << " signed " << paper.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << this->getName() << " couldn't sign " << paper.getName() << " because ";
+    }
+}
+
 void	Bureaucrat::promote( void )
 {
 	if (this->_grade < 2)
