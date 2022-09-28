@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:14:23 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 12:31:45 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:42:56 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,10 @@ std::ostream &			operator<<( std::ostream & o, Form const & i )
 
 void	Form::beSigned(Bureaucrat &someone)
 {
-	if ()
+	if (someone.getGrade() > this->_gradetosign)
+		throw Form::GradeTooLowException();
+	else
+		this->_signed = true;
 }
 
 const char*	Form::GradeTooHighException::what( void ) const throw()

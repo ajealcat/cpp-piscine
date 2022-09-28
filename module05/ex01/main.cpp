@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/27 18:14:52 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:51:31 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 
 int main(void)
 {
+	Form One("Only the boss", 1, 1);
+	Form Two("For le Stagiaire", 150, 150);
+	Form Three("You can sign but not exec", 150, 1);
+	Form Four("Negatif", 0, -1);
+	Form Five("Too low", 4010, 4010);
 
 	try
 	{
