@@ -6,7 +6,7 @@
 /*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 15:00:20 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 19:57:40 by anna             ###   ########.fr       */
+/*   Updated: 2022/09/29 10:54:09 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,18 +65,17 @@ void	ShrubberyCreationForm::doit( void ) const
 		throw std::ios::failure( "Error opening output file. ");
 	for (int i = 3; i; --i)
 	{
-		ofs << " \n";
-		ofs << "   ccee88oo \n";
-		ofs << " C8O8O8Q8PoOb o8oo \n";
-		ofs << "dOB69QO8PdUOpugoO9bD \n";
-		ofs << "CgggbU8OU qOp qOdoUOdcb \n";
-		ofs << "  6OuU  /p u gcoUodpP \n";
-		ofs << "   \\\\//  /douUP \n";
-		ofs << "    \\\\//// \n";
-		ofs << "      |||/\\  \n";
-		ofs << "      |||\\/  \n";
-		ofs << "      |||||  \n";
-		ofs << ".....//||||\\.... \n" << std::endl;
+		ofs << "               ,@@@@@@@, " << std::endl;
+		ofs << "       ,,,.   ,@@@@@@/@@,  .oo8888o. " << std::endl;
+		ofs << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o " << std::endl;
+		ofs << "   ,%&\\%&&%&&%,@@@\\@@@/@@@88\\88888/88' " << std::endl;
+		ofs << "   %&&%&%&/%&&%@\\@@/ /@@@88888\\88888'" << std::endl;
+		ofs << "    %&&%/ %&%%&&@@\\ V /@@' `88\\8 `/88' " << std::endl;
+		ofs << "    `&%\\ ` /%&'    |.|        \\ '|8' " << std::endl;
+		ofs << "        |o|        | |         | | " << std::endl;
+		ofs << "        |.|        | |         | | " << std::endl;
+		ofs << "     \\/ ._\\//_/__/  ,\\_//__\\/.  \\_//__/_" << std::endl;
+		ofs.close();
 	}
 	ofs.close();
 }
