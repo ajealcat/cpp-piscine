@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:14:23 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 19:13:46 by anna             ###   ########.fr       */
+/*   Updated: 2022/09/29 16:59:32 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ class Form
 		bool	getSigned( void ) const;
 		int		getGradetosign( void ) const;
 		int		getGradetoexec( void ) const;
-		void	beSigned(const Bureaucrat &someone ); 
-
+		void	beSigned(const Bureaucrat &someone );
+		void	execute(Bureaucrat const &executor) const;
+		virtual void	doit( void ) const = 0;
 
 	private:
 
@@ -52,7 +53,11 @@ class Form
 		{
 				virtual const char*	what() const throw();
 		};
-	
+
+		class NotSignedException : public std::exception
+		{
+				virtual const char* what() const throw();
+		};
 
 };
 
