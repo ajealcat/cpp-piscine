@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/29 14:59:31 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:09:09 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int main(void)
 	try
 	{
 		a.signForm(One);
-		One.doit();
+		a.executeForm(One);
 		a.signForm(Two);
-		Two.doit();
+		a.executeForm(Two);
 		a.signForm(Three);
-		Three.doit();
+		a.executeForm(Three);
 	}
 	catch(const std::exception& e)
 	{
@@ -43,6 +43,7 @@ int main(void)
 	try
 	{
 		b.signForm(Two);
+		b.executeForm(Two);
 
 	}
 	catch(const std::exception& e)
@@ -53,6 +54,7 @@ int main(void)
 	try
 	{
 		c.signForm(Three);
+		c.executeForm(Three);
 	}
 	catch(const std::exception& e)
 	{

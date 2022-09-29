@@ -26,7 +26,6 @@ class Bureaucrat
 		void	signForm(Form &paper ) const;
 
 
-
 	private:
 
 		std::string const _name;

@@ -69,6 +69,20 @@ void	Bureaucrat::signForm(Form &paper) const
     }
 }
 
+
+void	Bureaucrat::executeForm(Form const &form)
+{
+	try 
+	{
+		form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << this->getName() << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;;
+    }
+}
+
 void	Bureaucrat::promote( void )
 {
 	if (this->_grade < 2)
