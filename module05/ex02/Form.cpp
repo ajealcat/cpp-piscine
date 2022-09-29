@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:14:23 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 14:34:02 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:41:15 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,16 @@ void	Form::beSigned(const Bureaucrat &someone)
 		throw Form::GradeTooLowException();
 	else
 		this->_signed = true;
+}
+
+void	Form::execute(Bureaucrat const &executor) const
+{
+	if (this->getSigned() == false)
+		throw Form::FormNotSignedException();
+	else if (executor.getGrade() > this->getGradetoexec())
+		throw Form::GradeTooLowException();
+	else
+		this->enforce();
 }
 
 const char*	Form::GradeTooHighException::what( void ) const throw()
