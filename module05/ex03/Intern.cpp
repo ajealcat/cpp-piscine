@@ -75,7 +75,6 @@ Form *Intern::makeForm(std::string const &formName, std::string const &target) c
 	if (i == 3)
 		throw Intern::FormNotFoundException();
 	return test[i](target);
-	return (NULL);
 }
 
 /*
