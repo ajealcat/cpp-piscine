@@ -68,20 +68,14 @@ static Form *makePresidential(std::string const &target)
 
 Form *Intern::makeForm(std::string const &formName, std::string const &target) const
 {
-	std::string formNames[3] = {"shrubbery form", "robotomy request", "pardon"};
+	std::string formNames[3] = {"shrubbery form", "robotomy request", "presidential pardon"};
 	Form *(*test[3])(std::string const &) = {&makeShrubbery, &makeRobotomy, &makePresidential};
-	try
-	{	
-		for (int i = 0; test[i] != NULL && formNames[i] == formName; ++i)
-			return test[i](target);
+	int i;
+	for (i = 0; i < 3 && formNames[i] != formName; ++i);
+	if (i == 3)
 		throw Intern::FormNotFoundException();
-		return (NULL);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-		return(NULL);
-	}
+	return test[i](target);
+	return (NULL);
 }
 
 /*

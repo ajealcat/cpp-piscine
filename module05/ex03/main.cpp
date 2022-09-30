@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/30 11:32:58 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/30 11:43:43 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int main(void)
         Intern  stagiaire;
         Form *newForm;
 
-        newForm = stagiaire.makeForm("pardon", "Pardon");
+        newForm = stagiaire.makeForm("presidential pardon", "Pardon");
         delete newForm;
-        newForm = stagiaire.makeForm("robotomy request", "Robot");
+        newForm = stagiaire.makeForm("roboomy request", "Robot");
         delete newForm;
         newForm = stagiaire.makeForm("shrubbery form", "Tea Tree");
         delete newForm;
