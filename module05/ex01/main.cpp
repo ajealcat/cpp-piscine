@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/28 14:52:30 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:18:31 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int main(void)
 	Bureaucrat c("Teemo", 150);
 	Bureaucrat d("Aphelios", 6);
 	
+	std::cout << " ================================================================= " << std::endl;
+
 	try
 	{
 		a.signForm(One);
@@ -34,6 +36,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << " ================================================================= " << std::endl;
 	try
 	{
 		b.signForm(Three);
@@ -46,6 +49,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}	
+	std::cout << " ================================================================= " << std::endl;
 	try
 	{
 		Form Four("Negatif", 0, -1);
@@ -55,6 +59,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << " ================================================================= " << std::endl;
 	try
 	{
 		d.signForm(Five);
@@ -67,6 +72,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << " ================================================================= " << std::endl;
 	try
 	{
 		c.promote();
@@ -78,5 +84,6 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << " ================================================================= " << std::endl;
 	return(0);
 }

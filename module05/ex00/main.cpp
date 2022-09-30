@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/27 18:10:03 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:17:29 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << " ================================================================= " << std::endl;
 	try
 	{
 		Bureaucrat b("Jinx", 50);
@@ -39,7 +40,8 @@ int main(void)
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;
-	}	
+	}
+	std::cout << " ================================================================= " << std::endl;
 	try
 	{
 		Bureaucrat c("Teemo", 150);
@@ -52,6 +54,7 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << " ================================================================= " << std::endl;
 	try
 	{
 		Bureaucrat d("Aphelios", -10);
