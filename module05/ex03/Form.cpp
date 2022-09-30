@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 18:14:23 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/29 16:48:31 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/30 11:36:34 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Form::Form(std::string const &name, int const grade_sign, int const grade_exec) : _name(name), _gradetosign(grade_sign), _gradetoexec(grade_exec)
+Form::Form(std::string const &name, int const grade_sign, int const grade_exec) : _name(name), _signed(false), _gradetosign(grade_sign), _gradetoexec(grade_exec)
 {
 	if(grade_sign < 1 || grade_exec < 1)
 		throw Form::GradeTooHighException();
