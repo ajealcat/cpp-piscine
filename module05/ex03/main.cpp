@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:16:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/09/30 11:43:43 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:01:54 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,17 @@ int main(void)
     {
         std::cerr << e.what() << '\n';
     }
-    // try
-	// {
-	// 	Intern someRandomIntern;
-	// 	Form* rrf;
+    try
+	{
+		Intern someRandomIntern;
+		Form* rrf;
 		
-	// 	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-	// 	delete rrf;
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cerr << e.what() << std::endl;
-	// }	
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		delete rrf;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}	
 	return(0);
 }
