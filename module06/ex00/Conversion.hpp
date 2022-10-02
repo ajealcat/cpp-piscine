@@ -19,11 +19,11 @@
 # include <cstdlib>
 # include <cstring>
 
-void	isChar(std::string const str);
-void	isInt(std::string const str);
-void	isFloat(std::string const str);
-void	isDouble(std::string const str);
-void	isExcept(std::string const str);
+void	convertChar(std::string const str);
+void	convertInt(std::string const str);
+void	convertFloat(std::string const str);
+void	convertDouble(std::string const str);
+void	convertExcept(std::string const str);
 
 bool		checkChar(std::string str);
 bool		checkInt(std::string str);
