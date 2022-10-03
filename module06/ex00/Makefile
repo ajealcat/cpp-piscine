@@ -6,11 +6,11 @@
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 16:05:24 by anna              #+#    #+#              #
-#    Updated: 2022/10/03 12:10:02 by ajearuth         ###   ########.fr        #
+#    Updated: 2022/10/03 14:30:21 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	execute
+NAME	=	convert
 SRCS	=	main.cpp Conversion.cpp 
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++

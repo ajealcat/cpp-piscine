@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 16:08:29 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/03 13:43:09 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:48:16 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@
 # include <cstdlib>
 # include <cstring>
 # include <stdexcept>
-#include <cmath>
-#include <iomanip>
+# include <cmath>
+# include <errno.h>
+# include <iomanip>
+# include <string>
 
 class Conversion
 {
@@ -37,10 +39,13 @@ class Conversion
 			void	ConvertInt();
 			void	ConvertFloat();
 			void	ConvertDouble();
+			int		getDetected(void) const;
+			void	all_impossible(void);
 
 	private:
 
-			double	_double;
+			std::string	_input;
+			int			_detected;
 
 			class BadArgument : public std::exception
 			{
