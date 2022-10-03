@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 11:33:22 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/03 17:41:44 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:52:42 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 Conversion::Conversion(std::string str) : _input(str)
 {
 	int i;
-	
+
+	if (str.size() == 1 && !isdigit(str[0]) && isprint(str[0]))
+	{
+		this->_detected = 4; // char
+		return ;
+	}
 	for (i = 0; isalnum(str[i]) || str[i] == '+' || str[i] == '-' || str[i] == '.'; ++i);
 	if (str[i])
 		throw BadArgument();
@@ -40,11 +45,6 @@ Conversion::Conversion(std::string str) : _input(str)
 	else if (str[i] == 'f' && !str[++i])
 	{
 		this->_detected = 1; // float
-		return ;
-	}
-	if (str.length() == 1 && isprint(str[0]))
-	{
-		this->_detected = 4; // char
 		return ;
 	}
 	i = 0;
@@ -147,11 +147,9 @@ void Conversion::ConvertFloat()
 	if (round(f) > __INT_MAX__ || round(f) < INT_MIN || isnanf(f))
 		std::cout << "impossible\n";
 	else
-	{
 		std::cout << static_cast<int>(f) << std::endl;
-		std::cout << "float: " << std::fixed << std::setprecision(1) << f << "f\n";
-		std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(f) << std::endl;
-	}
+	std::cout << "float: " << std::fixed << std::setprecision(1) << f << "f\n";
+	std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(f) << std::endl;
 }
 
 void Conversion::ConvertDouble()
@@ -159,7 +157,6 @@ void Conversion::ConvertDouble()
 	double	d = strtod(this->_input.c_str(), NULL);
 	if (errno)
 		return (this->all_impossible());
-		
 	std::cout << "char: ";
 	if (d > static_cast<double>(CHAR_MAX) || d < static_cast<double>(CHAR_MIN) || isnan(d))
 		std::cout << "impossible\n";
