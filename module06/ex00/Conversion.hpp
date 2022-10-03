@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 16:08:29 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/01 16:58:49 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/03 11:48:41 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,34 @@
 # include <limits.h>
 # include <cstdlib>
 # include <cstring>
+#include <cmath>
+#include <iomanip>
 
-void	convertChar(std::string const str);
-void	convertInt(std::string const str);
-void	convertFloat(std::string const str);
-void	convertDouble(std::string const str);
-void	convertExcept(std::string const str);
+class Conversion
+{
+	public:
 
-bool		checkChar(std::string str);
-bool		checkInt(std::string str);
-bool		checkFloat(std::string str);
-bool		checkDouble(std::string str);
-bool		checkExcep(std::string str);
+			Conversion(std::string str = "default");
+			Conversion(const Conversion &src);
+
+			Conversion &operator=(const Conversion &rhs);
+
+			~Conversion();
+			
+			void	ConvertChar();
+			void	ConvertInt();
+			void	ConvertFloat();
+			void	ConvertDouble();
+
+	private:
+
+			double	_double;
+
+			class BadArgument : public std::exception
+			{
+				const char *what() const throw();
+			};
+};
 
 
 #endif

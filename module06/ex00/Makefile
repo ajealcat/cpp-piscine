@@ -6,12 +6,12 @@
 #    By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 16:05:24 by anna              #+#    #+#              #
-#    Updated: 2022/10/01 16:07:21 by ajearuth         ###   ########.fr        #
+#    Updated: 2022/10/03 12:10:02 by ajearuth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	execute
-SRCS	=	main.cpp 
+SRCS	=	main.cpp Conversion.cpp 
 OBJS	=	$(SRCS:.cpp=.o)
 COMPIL	=	c++
 FLAGS	=	-std=c++98 -Wall -Wextra -Werror
