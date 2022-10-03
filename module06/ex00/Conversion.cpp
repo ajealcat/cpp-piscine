@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 11:33:22 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/03 11:55:17 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/03 13:52:34 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void Conversion::ConvertFloat()
 {
     std::cout << "float: ";
     std::cout << static_cast<float>(this->_double);
-    if (std::fmod(this->_double,1) == 0)
+    if (std::fmod(this->_double,1) == 0) // fmod verifie le reste apres la virgule
         std::cout << ".0";
     std::cout << 'f' << std::endl;
 }

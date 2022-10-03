@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 16:08:29 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/03 11:48:41 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/03 13:43:09 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <limits.h>
 # include <cstdlib>
 # include <cstring>
+# include <stdexcept>
 #include <cmath>
 #include <iomanip>
 
