@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   serialize.hpp                                      :+:      :+:    :+:   */
+/*   serialize.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 09:05:45 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/03 09:24:44 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/10/03 09:19:17 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/10/03 09:28:01 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZE_HPP
-# define SERIALIZE_HPP
+#include "serialize.hpp"
 
-# include <cstdlib>
-# include <iostream>
-# include <stdint.h>
-
-typedef struct s_data
+uintptr_t serialize(Data *ptr)
 {
-	std::string name;
-	char 		c;
-	int 		i;
-} Data;
+    uintptr_t   dataSerialize;
+    
+    dataSerialize = reinterpret_cast<uintptr_t>(ptr);
+    return (dataSerialize);
+}
 
-uintptr_t serialize(Data *ptr);
-Data*	deserialize(uintptr_t raw);
+Data *deserialize(uintptr_t raw)
+{
+    Data    *rawDeserialize;
 
-#endif
+    rawDeserialize = reinterpret_cast<Data*>(raw);
+    return (rawDeserialize);
+}
