@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 14:49:26 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/04 15:26:41 by ajearuth         ###   ########.fr       */
+/*   Created: 2022/10/04 15:22:43 by ajearuth          #+#    #+#             */
+/*   Updated: 2022/10/04 16:31:48 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef ITER_HPP
+# define ITER_HPP
 
 # include <iostream>
-# include <string>
 
-template <typename T>
-void swap(T &a, T &b)
+
+template <typename T, typename R>
+void	iter(T *tab, size_t const size, R(*fonction)(T&))
 {
-	T tmp;
-
-	tmp = b;
-	b = a;
-	a = tmp;
+	for (size_t i = 0; i < size; ++i)
+		fonction(tab[i]);
 }
 
 template <typename T>
-T min(T const &a, T const &b)
+void	iter(T const *tab, size_t const size,  void(*fonction)(T const &ref))
 {
-	if (a >= b)
-		return (b);
-	return (a);
+	for (size_t i = 0; i < size; ++i)
+		fonction(tab[i]);
 }
 
-template <typename T>
-T max(T const &a, T const &b)
-{
-	if (a <= b)
-		return (b);
-	return (a);
-}
-
-#endif /* ******************************************************** WHATEVER_H */
+#endif
