@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:27:16 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/04 20:09:32 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:58:35 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,13 @@ class Array
 template<typename T>
 Array<T>::Array(void) : _array(NULL), _size(0)
 {
-	std::cout << " Array default constructor called." << std::endl;
+	std::cout << "Array default constructor called." << std::endl;
 }
 
 template<typename T>
 Array<T>::Array(unsigned int n) : _size(n)
 {
+	std::cout << "Array constructor called." << std::endl;
 	this->_array = new T[_size];	
 }
 

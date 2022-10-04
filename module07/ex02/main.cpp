@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:26:51 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/04 20:13:54 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:58:19 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,56 +18,53 @@
 
 int main() 
 {
-	{
-		Array<int>	arr1(10);
-		Array<int>	arr2(10);
+	// {
+	// 	Array<int>	arr1(10);
+	// 	Array<int>	arr2(10);
 		
-		for (int i = 0; i < 10; ++i)
-		{
-			arr1[i] = rand();
-			arr2[i] = rand();	
-		}
-		arr1 = arr2;
-	}
+	// 	for (int i = 0; i < 10; ++i)
+	// 	{
+	// 		arr1[i] = rand();
+	// 		arr2[i] = rand();	
+	// 	}
+	// 	arr1 = arr2;
+	// }
+	Array<int>	EmptyArr;
 	
-    Array<int>	EmptyArr;
-    std::cout << "size of Emptyarray : " << EmptyArr.size() << std::endl;
-    
-    std::cout << std::endl;
-    
-    Array<std::string> strArray(3);
-    strArray[0] = "begin";
-    strArray[1] = "middle";
-    strArray[2] = "end";
-    
-    unsigned int size;
-    size = strArray.size();
-    std::cout << "---- strArray values ----" << std::endl; 
-    for (unsigned int i = 0; i < size; i++)
-        std::cout << "strArray[" << i << "] : " << strArray[i] << std::endl; 
- 
-    std::cout << std::endl;
+	std::cout << "size of Emptyarray : " << EmptyArr.size() << std::endl;
+	std::cout << std::endl;
+	Array<std::string> strArray(3);
+	strArray[0] = "begin";
+	strArray[1] = "middle";
+	strArray[2] = "end";
 
-    std::cout << "---- Bad Index  ----" << std::endl;
-    try { std::cout << strArray[42] << '\n'; }
-    catch (std::exception &e){ std::cout << e.what() << '\n'; }
+	unsigned int size;
+	size = strArray.size();
+	std::cout << "strArray values : " << std::endl; 
+	std::cout << std::endl;
+	for (unsigned int i = 0; i < size; i++)
+		std::cout << "strArray[" << i << "] : " << strArray[i] << std::endl; 
+	std::cout << std::endl;
+	Array<std::string> copy = strArray;
+	copy[1] = "changed";
+	size = copy.size();
+	std::cout << "copy values :" << std::endl;
+	std::cout << std::endl;
+	for (unsigned int i = 0; i < size; i++)
+		std::cout << "copy[" << i << "] : " << copy[i] << " " << std::endl;
 
-    std::cout << std::endl;
-    
-    //copie de strArray
-    Array<std::string> copy = strArray;
-    copy[1] = "other";
-    size = copy.size();
-    std::cout << "---- copy values ----" << std::endl;
-    for (unsigned int i = 0; i < size; i++)
-        std::cout << "copy[" << i << "] : " << copy[i] << " " << std::endl;
-    
-    std::cout << std::endl;
-    std::cout << "---- strArray without modification after copy ----" << std::endl;
-    for (unsigned int i = 0; i < size; i++)
-        std::cout << "strArray[" << i << "] : " << strArray[i] << std::endl; 
-    std::cout << std::endl;
- 
+	std::cout << std::endl;
+	std::cout << "strArray original didn't change : " << std::endl;
+	std::cout << std::endl;
+	for (unsigned int i = 0; i < size; i++)
+		std::cout << "strArray[" << i << "] : " << strArray[i] << std::endl; 
+	std::cout << std::endl;
+
+	std::cout << "Bad Index : " << std::endl;
+	std::cout << std::endl;
+	try { std::cout << strArray[42] << '\n'; }
+	catch (std::exception &e){ std::cout << e.what() << '\n'; }
+
     return 0;
 }
 
