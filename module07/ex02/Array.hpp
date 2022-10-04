@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:27:16 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/04 19:28:04 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:09:32 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ Array<T>::~Array(void)
 }
 
 template<typename T>
-Array<T>::Array( const Array &src )
+Array<T>::Array( const Array &src ) : _array(NULL), _size(0)
 {
 	*this = src;
 }

@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:26:51 by ajearuth          #+#    #+#             */
-/*   Updated: 2022/10/04 19:26:55 by ajearuth         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:13:54 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 int main() 
 {
-
 	{
 		Array<int>	arr1(10);
 		Array<int>	arr2(10);
@@ -30,8 +29,7 @@ int main()
 		}
 		arr1 = arr2;
 	}
-
-
+	
     Array<int>	EmptyArr;
     std::cout << "size of Emptyarray : " << EmptyArr.size() << std::endl;
     
@@ -50,7 +48,7 @@ int main()
  
     std::cout << std::endl;
 
-    std::cout << "---- Index invalide ----" << std::endl;
+    std::cout << "---- Bad Index  ----" << std::endl;
     try { std::cout << strArray[42] << '\n'; }
     catch (std::exception &e){ std::cout << e.what() << '\n'; }
 
@@ -72,7 +70,6 @@ int main()
  
     return 0;
 }
-
 
 // #define MAX_VAL 750
 // int main(int, char**)
