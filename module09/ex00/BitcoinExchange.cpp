@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:02:28 by ajearuth          #+#    #+#             */
-/*   Updated: 2023/03/21 11:01:55 by ajearuth         ###   ########.fr       */
+/*   Updated: 2023/03/21 22:45:22 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ BitcoinExchange::BitcoinExchange(const BitcoinExchange &src)
 	*this = src;
 }
 
-
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
@@ -33,7 +32,6 @@ BitcoinExchange::BitcoinExchange(const BitcoinExchange &src)
 BitcoinExchange::~BitcoinExchange()
 {
 }
-
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
@@ -46,13 +44,6 @@ BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &rhs)
 	this->_map = rhs._map;
 	return *this;
 }
-
-// std::ostream &operator<<(std::ostream &o, BitcoinExchange const &i)
-// {
-// 	o << "Value = " << i.getValue();
-// 	return o;
-// }
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
@@ -99,12 +90,19 @@ bool BitcoinExchange::dateChecker(std::string line)
 bool BitcoinExchange::valueChecker(std::string val)
 {
 	size_t pos;
+	size_t pos2;
 
 	if (!val.find("|"))
 		return false;
 	pos = val.find("|");
 	this->_value = val.substr(pos + 2);
-	if (this->_value.size() > 10 || (this->_value.size() == 10 && this->_value.compare(STR_INT_MAX) > 0)) 
+	pos2 = this->_value.find_first_not_of("0123456789.-", 0);
+	if (pos2 != std::string::npos)
+	{
+		std::cout << "Error: not a number" << std::endl;
+		return false;
+	}
+	else if (this->_value.size() > 10 || (this->_value.size() == 10 && this->_value.compare(STR_INT_MAX) > 0)) 
 	{
 		std::cout << "Error: too large a number." << std::endl;
 		return (false);
@@ -138,11 +136,15 @@ void BitcoinExchange::fillMap()
 				continue ;
 			else
 			{
+				if (dateChecker(line) == false)
+					continue ;
+				if (valueCheckerCsv(line) == false)
+					continue ;
 				found = line.find(",");
 				date = line.substr(0, found);
 				value = line.substr(found + 1);
+
 				this->_map.insert(std::pair<std::string, float>(date, atof(value.c_str())));
-				std::map<std::string, float>::iterator it;
 			}
 		}
 		
@@ -150,9 +152,35 @@ void BitcoinExchange::fillMap()
 	else
 		std::cout << "Error: could not open csv data file\n";
 	data.close();  
-
 }
 
+bool BitcoinExchange::valueCheckerCsv(std::string str)
+{
+	size_t pos;
+	size_t pos2;
+
+	if (!str.find(","))
+		return false;
+	pos = str.find(",");
+	this->_value = str.substr(pos + 1);
+	pos2 = this->_value.find_first_not_of("0123456789.", 0);
+	if (pos2 != std::string::npos)
+	{
+		std::cout << "Error: not a number" << std::endl;
+		return false;
+	}
+	else if (this->_value.size() > 10 || (this->_value.size() == 10 && this->_value.compare(STR_INT_MAX) > 0)) 
+	{
+		std::cout << "Error: too large a number." << std::endl;
+		return (false);
+	}
+	else if (atoi(this->_value.c_str()) < 0)
+	{
+		std::cout << "Error: not a positive number." << std::endl;
+		return false;
+	}
+	return true;
+}
 
 void BitcoinExchange::inputChecker(std::string line)
 {
@@ -178,9 +206,9 @@ void BitcoinExchange::inputChecker(std::string line)
 			std::map<std::string, float>::iterator it2;
 			it2 = this->_map.lower_bound(this->_date);
 			if (it2 == this->_map.begin())
-				std::cout << "Error: no data before 2009\n";
+				std::cout << "Error: no data for this early\n";
 			else if (it2 == this->_map.end())
-				std::cout << "Error: no data before 2022\n";
+				std::cout << "Error: no data for this late\n";
 			else
 			{
 				--it2;
