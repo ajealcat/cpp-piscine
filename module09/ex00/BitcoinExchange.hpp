@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:02:53 by ajearuth          #+#    #+#             */
-/*   Updated: 2023/03/21 22:39:50 by ajearuth         ###   ########.fr       */
+/*   Updated: 2023/03/22 17:17:35 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,5 @@ class BitcoinExchange
 		std::string _date;
 
 };
-
-std::ostream &operator<<(std::ostream &o, BitcoinExchange const &i);
 
 #endif /* ************************************************* BITCOINEXCHANGE_H */
