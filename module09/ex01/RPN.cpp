@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 13:14:27 by ajearuth          #+#    #+#             */
-/*   Updated: 2023/03/21 22:47:57 by ajearuth         ###   ########.fr       */
+/*   Updated: 2023/03/22 14:14:32 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ RPN &RPN::operator=(RPN const &rhs)
 {
 	if (this == &rhs)
 		return *this;
+	this->_pile = rhs._pile;
 	return *this;
 }
 

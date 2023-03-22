@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:02:28 by ajearuth          #+#    #+#             */
-/*   Updated: 2023/03/21 22:45:22 by ajearuth         ###   ########.fr       */
+/*   Updated: 2023/03/22 14:14:03 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &rhs)
 	if ( this == &rhs )
 		return *this;
 	this->_map = rhs._map;
+	this->_value = rhs._value;
+	this->_date = rhs._date;
 	return *this;
 }
 
