@@ -6,13 +6,11 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:02:09 by ajearuth          #+#    #+#             */
-/*   Updated: 2023/03/21 22:39:19 by ajearuth         ###   ########.fr       */
+/*   Updated: 2023/03/22 17:27:44 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
-#include <fstream>
-#include <iostream>
 
 int main(int ac, char **av)
 {
