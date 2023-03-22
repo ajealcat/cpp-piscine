@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 13:16:40 by ajearuth          #+#    #+#             */
-/*   Updated: 2023/03/22 17:16:48 by ajearuth         ###   ########.fr       */
+/*   Updated: 2023/03/22 18:02:10 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,9 +193,9 @@ void PmergeMe::merge_sort()
 		std::cout << std::endl;
 	}
 	double time = (double)vec_time / CLOCKS_PER_SEC;
-	std::cout << "Time to process a range of " << this->_vec.size() << " elements with std::vector : " << std::fixed << std::setprecision(6) << time << " s" << std::endl;
+	std::cout << "Time to process a range of " << this->_vec.size() << " elements with std::vector : " << std::fixed << std::setprecision(6) << time << "s" << std::endl;
 	time = (double)deq_time / CLOCKS_PER_SEC;
-	std::cout << "Time to process a range of " << this->_deq.size() << " elements with std::deque : " << std::fixed << std::setprecision(6) << time << " s" << std::endl;
+	std::cout << "Time to process a range of " << this->_deq.size() << " elements with std::deque  : " << std::fixed << std::setprecision(6) << time << "s" << std::endl;
 }
 
 /*

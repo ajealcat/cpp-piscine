@@ -6,7 +6,7 @@
 /*   By: ajearuth <ajearuth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 13:52:33 by ajearuth          #+#    #+#             */
-/*   Updated: 2023/03/22 17:16:20 by ajearuth         ###   ########.fr       */
+/*   Updated: 2023/03/22 17:57:40 by ajearuth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(int ac, char **av)
 {
-    if (ac <= 2)
+    if (ac < 2)
         std::cout << "Error" << std::endl;
     else
     {
@@ -45,7 +45,7 @@ int main(int ac, char **av)
             }
             std::cout << "[...]" << std::endl;
         }
-        else 
+        else
         {
             for (; it != value.getVector().end(); it++)
                 std::cout << *it << " ";
